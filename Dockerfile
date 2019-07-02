@@ -17,3 +17,4 @@ RUN \
   echo "user:user" | chpasswd && adduser user sudo
   
 USER user 
+CMD ["/bin/bash"]

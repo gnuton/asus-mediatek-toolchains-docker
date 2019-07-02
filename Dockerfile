@@ -16,5 +16,5 @@ RUN \
   useradd -ms /bin/bash user && \
   echo "user:user" | chpasswd && adduser user sudo
   
-USER user 
+USER root 
 CMD ["/bin/bash"]

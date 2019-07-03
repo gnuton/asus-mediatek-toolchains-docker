@@ -14,7 +14,12 @@ RUN \
   apt-get install -y build-essential bison flex gawk dos2unix libstdc++5 ia32-libs autoconf2.13 autoconf-archive gnu-standards autoconf-doc libtool gettext git net-tools groff texinfo sudo && \
   echo "Adding non-root user..." && \
   useradd -ms /bin/bash user && \
-  echo "user:user" | chpasswd && adduser user sudo
+  echo "user:user" | chpasswd && adduser user sudo && \
+  echo "Updating git" && \
+  add-apt-repository ppa:git-core/ppa -y && \
+  apt-get update && \
+  apt-get install git -y && \
+  git --version
   
 USER root 
 CMD ["/bin/bash"]

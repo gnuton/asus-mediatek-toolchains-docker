@@ -21,5 +21,5 @@ RUN \
   apt-get install git -y && \
   git --version
   
-USER root 
+USER user 
 CMD ["/bin/bash"]

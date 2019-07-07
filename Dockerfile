@@ -11,7 +11,7 @@ ADD toolchain/mips-linux-uclibc.tgz /opt/trendchip/
 RUN \
   DEBIAN_FRONTEND=noninteractive && \
   apt-get update && \
-  apt-get install -y software-properties-common python-software-properties build-essential bison flex gawk dos2unix libstdc++5 ia32-libs autoconf2.13 autoconf-archive gnu-standards autoconf-doc libtool gettext git net-tools groff texinfo sudo && \
+  apt-get install -y software-properties-common python-software-properties build-essential bison flex gawk dos2unix libstdc++5 ia32-libs autoconf2.13 autoconf-archive gnu-standards autoconf-doc libtool gettext git net-tools groff texinfo sudo pkg-config && \
   echo "Adding non-root user..." && \
   useradd -ms /bin/bash user && \
   echo "user:user" | chpasswd && adduser user sudo && \
